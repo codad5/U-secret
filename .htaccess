@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^textme/([0-9a-zA-Z_-]+) textme.php?msgme=$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.css -f
+
+RewriteRule ^textme/css/([0-9a-zA-Z_-]+) home.css [NC,L]
